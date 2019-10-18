@@ -1,9 +1,10 @@
 
 exports.getAllTasks = async (req, res) => {
     try {
+        console.log('req user', req.user);
         res.json({ success: true});
     } catch (error) {
-        res.json({ success: false, message: error, result: 'Could not find movies' });
+        res.json({ success: false, message: error, result: 'Could not find tasks for user' });
     }
 }
 

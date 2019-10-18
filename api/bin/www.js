@@ -1,10 +1,11 @@
-const app = require('../app');
 const http = require('http');
+const app = require('../app');
+const config = require('../config');
 
 /**
  * Get port from environment.
  */
-const port = normalizePort(process.env.PORT || '3001');
+const port = normalizePort(config.port);
 
 /**
  * Create HTTP server.
