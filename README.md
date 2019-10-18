@@ -3,6 +3,11 @@
 Prereqs:
  - Requires nodejs and mongo to be installed
 
+## Install dependencies
+
+In app root directory type 'npm install' 
+
+In server /api directory type 'npm install'
 
 ### Run Server in /api `npm start`
 Server running on `http://localhost:3001/api`
