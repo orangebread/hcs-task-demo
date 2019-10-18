@@ -36,3 +36,5 @@ Notes:
 ### Front end app
     1) Build a basic html login page with styles
     2) Start hooking up logic for registration/login and storing token
+    3) Added request interceptors for checking jwt 
+    4) Added components to build out the Todo page
