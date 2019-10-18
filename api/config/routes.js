@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-// Tasks
-router.use('/api/tasks', require('../components/tasks/tasks.routes'));
+// Task
+router.use('/api/task', require('../components/task/task.routes'));
 
 // User/Login
 router.use('/api/user', require('../components/user/user.routes'));

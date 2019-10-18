@@ -8,7 +8,7 @@ exports.getUserById = async (req, res) => {
     try {
         res.json({ success: true});
     } catch (error) {
-        res.json({ success: false, message: error, result: 'Could not find movie' });
+        res.status(500).json({ success: false, message: error, result: 'Could not find user' });
     }
 }
 
@@ -29,7 +29,7 @@ exports.createUser = async (req, res) => {
         res.status(201).json({ success: true, message: 'Successfully created user'});
     } catch (error) {
         console.log('err', error);
-        res.json({ success: false, message: 'Error creating user'});
+        res.status(500).json({ success: false, message: 'Error creating user'});
     }  
     
 }
@@ -44,6 +44,6 @@ exports.authenticateUser = async (req, res) => {
         }
     } catch (error) {
         console.log('err', error);
-        res.json({ success: false, message: 'Error logging in'});
+        res.status(500).json({ success: false, message: 'Error logging in'});
     }
 }

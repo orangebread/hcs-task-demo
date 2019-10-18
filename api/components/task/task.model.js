@@ -3,16 +3,15 @@ const mongoose = require('mongoose');
 const TaskSchema = new mongoose.Schema({
   description: {
     type: String,
+    required: true,
     maxlength: 50
   },
   due_date: {
-    type: String,
-    minlength: 3,
-    maxlength: 50
+    type: Date,
+    required: true
   },
-  user: [
+  user: 
     { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
-  ]
 }, {
     timestamps: true
 });
