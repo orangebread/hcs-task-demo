@@ -1,12 +1,13 @@
 import React from 'react'
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-import LoginForm from './LoginForm';
-import { authUser } from '../actions';
+import SignupForm from './SignupForm';
+import { createUser } from '../actions';
 
 const Login = () => {
     const dispatch = useDispatch();
-    const onSubmit = formValues => dispatch(authUser(formValues));
+    const onSubmit = formValues => dispatch(createUser(formValues));
     
 	return (
 		<div>
@@ -14,11 +15,11 @@ const Login = () => {
                 <div className="column">
                     <h2 className="ui teal image header">
                         <div className="content">
-                            Log in to your HCS Todo account
+                           Sign up for HCS Todo!
                         </div>
                     </h2>
-                    <LoginForm onSubmit={onSubmit} />
-                    <div className="ui message">New user? <a href="#">Sign Up</a></div>
+                    <SignupForm onSubmit={onSubmit} />
+                    <div className="ui message">Already signed up? <Link to="/login">Back to login</Link></div>
                 </div>
             </div>
 		</div>

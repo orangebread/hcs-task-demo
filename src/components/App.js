@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route, Switch } from "react-router-dom";
 import { PrivateRoute } from './_shared/PrivateRoute';
 import Login from './Login';
+import Signup from './Signup';
 import TodoList from './Todo/TodoList';
 import TodoCreate from './Todo/TodoCreate';
 import TodoDelete from './Todo/TodoDelete';
@@ -17,6 +18,7 @@ const App = () => {
 					<Switch>
                         <PrivateRoute exact path="/" component={TodoList} />
 						<Route path="/login" exact component={Login} />
+						<Route path="/sign-up" exact component={Signup} />
 						<Route path="/task/create" exact component={TodoCreate} />
 						<Route path="/task/delete/:id" exact component={TodoDelete} />
 					</Switch>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import LoginForm from './LoginForm';
 import { authUser } from '../actions';
@@ -18,7 +19,7 @@ const Login = () => {
                         </div>
                     </h2>
                     <LoginForm onSubmit={onSubmit} />
-                    <div className="ui message">New user? <a href="#">Sign Up</a></div>
+                    <div className="ui message">New user? <Link to="/sign-up">Sign Up</Link></div>
                 </div>
             </div>
 		</div>

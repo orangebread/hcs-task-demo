@@ -24,6 +24,12 @@ export const authUser = formValues => async dispatch => {
     history.push('/');
 }
 
+export const createUser = formValues => async dispatch => {
+    const response = await api.post('/user', { ...formValues });
+    console.log('response', response);
+    history.push('/login');
+}
+
 export const logOut = () => async dispatch => {
     console.log('logging out');
     dispatch({ type: USER_LOGOUT });

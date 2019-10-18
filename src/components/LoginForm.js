@@ -12,12 +12,12 @@ const LoginForm = props => {
 		}
 	}
 
-	const renderInput = ({ input, label, meta }) => {
+	const renderInput = ({ input, label, type, meta }) => {
 		const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
 		return (
 			<div className={className}>
 				<label>{label}</label>
-				<input {...input} autoComplete="off"/>
+				<input {...input} type={type} autoComplete="off"/>
 				{renderError(meta)}
 			</div>
 		);
@@ -30,8 +30,8 @@ const LoginForm = props => {
 	return (
         <form onSubmit={props.handleSubmit(onSubmit)} className="ui form error">
             <div className="ui stacked segment">    
-                <Field name="email" component={renderInput} label="Enter Email"/>
-                <Field name="password" component={renderInput} label="Enter Password"/>
+                <Field name="email" type="text" component={renderInput} label="Enter Email"/>
+                <Field name="password" type="password" component={renderInput} label="Enter Password"/>
         
                 <button className="ui button primary">Login</button>
             </div>
